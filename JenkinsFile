@@ -34,7 +34,7 @@ pipeline {
             steps {
                 script {
                     //Install AWS CLI if not already installed
-                    sh 'pip install awscli'
+                    sh 'apt install awscli'
 
                     //Update kubeconfig for the EKS cluster
                     sh 'aws eks update-kubeconfig --name $CLUSTER_NAME --region &AWS_REGION'
