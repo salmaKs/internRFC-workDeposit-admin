@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import {Providers} from './providers'
 import { fonts } from "./fonts";
 import "./globals.css";
+import Navbar from "@/component/navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang='en' className={fonts.rubik.variable}>
     <body>
-      <Providers>{children}</Providers>
+      <Providers>
+        <Navbar/>
+        {children}</Providers>
     </body>
   </html>
   );
